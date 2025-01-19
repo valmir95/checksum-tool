@@ -19,7 +19,8 @@ ignored_file_names = [
 
 def is_dir_ignored(current_abs_path):
     return any(
-        path_element in ignored_dirs for path_element in current_abs_path.split("\\")
+        path_element in ignored_dirs
+        for path_element in current_abs_path.split(os.path.sep)
     )
 
 
